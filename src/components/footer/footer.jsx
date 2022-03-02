@@ -4,7 +4,11 @@ const Footer = () => {
     const brand = "facebook";
     return (
         <footer>
-            <Header title="First React APP Footer" btnLabel="-" showButton={false}/>
+            <Header 
+            title="First React APP Footer" 
+            btnLabel="-" 
+            showButton={false}
+            showClock={false}/>
         </footer>
     )
 }
