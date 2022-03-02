@@ -1,0 +1,20 @@
+.display-counter{
+    width: 4rem;
+    height: 3rem;
+    border: 1px solid black;
+    margin: 1rem 0;
+}
+
+#counter-component {
+    padding: 1rem;
+}
+
+.counter-btns-container {
+    display: flex;
+    gap: 1rem
+}
+
+button {
+    min-width: 1.5rem;
+    cursor: pointer;
+}
