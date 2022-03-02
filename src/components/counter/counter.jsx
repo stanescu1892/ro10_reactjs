@@ -8,7 +8,6 @@ const Counter = (props) => {
     //dependencies array is empty => callback executes at component did mount
     useEffect(() => {
         console.log("component-did-mount")
-        
     }, [])
 
     //dependencies array is missing => callback executes at every render
