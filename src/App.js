@@ -3,6 +3,7 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Counter from './components/counter/counter';
 import Form from './components/form/form';
+import FormRef from './components/formRef/formRef';
 import ShowData from './components/showData/showData';
 import './App.css';
 
@@ -15,7 +16,7 @@ function App() {
       </header>
       <main>
         <Counter />
-        <Form/>
+        <FormRef/>
       </main>
       <Footer />
     </div>
