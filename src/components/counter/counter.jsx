@@ -5,6 +5,7 @@ const Counter = (props) => {
     const [count, setCount] = useState(0);
     const [onOff, setOnOff] = useState(false);
 
+
     //dependencies array is empty => callback executes at component did mount
     useEffect(() => {
         console.log("component-did-mount")
@@ -32,7 +33,6 @@ const Counter = (props) => {
         setOnOff(e.target.checked)
     }
 
-    console.log(count);
 
     return(
         <div id="counter-component">

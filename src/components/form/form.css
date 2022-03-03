@@ -1,0 +1,23 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 2px solid rgba(128, 128, 128, 0.657);
+    border-radius: 4px;
+    margin: 1rem;
+}
+
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.form-input-container > label {
+    margin: 0.2rem;
+}
+
+.form-submit-button {
+    margin: 1rem 0;
+    max-width: 5rem;
+}
