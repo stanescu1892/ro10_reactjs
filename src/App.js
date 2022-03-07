@@ -8,11 +8,21 @@ import ShowData from './components/showData/showData';
 import './App.css';
 
 function App() {
+  const [clock, setClock] = useState();
+
+  // the returned callback will be called at component will unmount
+  useEffect(() => {
+      const tickId = setInterval(() => {
+          setClock(new Date().toLocaleString())
+      }, 1000);
+
+      return () => clearInterval(tickId);
+  }, [])
 
   return (
     <div className="App">
       <header>
-        <Header title="Header1" btnLabel="Login" showButton={true} showClock={true} />
+        <Header title="Header1" btnLabel="Login" showButton={true} showClock={true} clock={clock}/>
       </header>
       <main>
         <Counter />

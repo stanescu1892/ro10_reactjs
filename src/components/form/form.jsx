@@ -32,7 +32,7 @@ const Form = (props) => {
         setSchool(e.target.value);
     }
 
-    console.log(name, age, school);
+    console.log(error, age);
 
     return (
         <>
@@ -40,7 +40,6 @@ const Form = (props) => {
                 <div className="form-input-container">
                     <label>Name</label>
                     <input type="text" onChange={handleName} name="name" value={name}/>
-                    
                 </div>
                 <div className="form-input-container">
                     <label>Age</label>

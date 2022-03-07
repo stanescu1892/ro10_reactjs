@@ -1,28 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import './header.css';
 
+
+
 const Header = (props) => {
-    const [clock, setClock] = useState();
-
-    // the returned callback will be called at component will unmount
-    useEffect(() => {
-        const tickId = setInterval(() => {
-            setClock(new Date().toLocaleString())
-        }, 1000);
-
-        return () => clearInterval(tickId);
+    const handleButton = useCallback(() => {
+        console.log("login")
     }, [])
 
     return (
-        <React.Fragment>
-            <div className="header-container">
-                <div>{props.title}</div>{props.showClock ? <span>{clock}</span> : null}
-                {props.showButton ? <button className="login-button">{props.btnLabel}</button> : null}
-            </div>
-            <div>
-
-            </div>
-        </React.Fragment>
+        <div className="header-container">
+            <div>{props.title}</div>{props.showClock ? <span>{props.clock}</span> : null}
+            {props.showButton ? <button className="login-button" onClick={handleButton}>{props.btnLabel}</button> : null}
+        </div>
     )
 }
 
